@@ -97,7 +97,8 @@ address public ethAddress; // use for a contract address or wallet address
 string public name; // use for word or hyperlink inputs 
 bool public voted;  // if true, that person already voted
 address[] addressArray; // an array of addresses 
-enum
+//enum provides a limited number of options for an output
+enum limitedOptions { Yes, No, Null}
 
 //sets a constant for the contract, can be handy to limit array sizes
 uint256 constant MAX_PARTICIPANTS = 100; // maximum number of participants
@@ -106,14 +107,10 @@ uint256 constant MAX_PARTICIPANTS = 100; // maximum number of participants
 struct DataObject {
     uint256 numberId; // unique number
     string name;   // short name
+    bool True; // true or false 
     }
 
-//enum provides a limited number of options for an output
-enum limitedOptions {
-    Yes,
-    No,
-    Null
-    }
+
 
 
 
